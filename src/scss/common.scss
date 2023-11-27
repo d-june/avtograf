@@ -1,0 +1,33 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.btn {
+	background: $accentColor;
+	color: $lightColor;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	padding: rem(12) rem(17);
+	display: flex;
+	gap: rem(6);
+	align-items: center;
+	justify-content: center;
+	border-radius: rem(12);
+	font-size: rem(12);
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background: $accentColorDark;
+			color: #fff;
+		}
+	}
+}
+
+.title {
+	font-family: FuturaFuturisBlackC;
+	font-size: rem(20);
+}
+
+.logo {
+	font-family: FuturaFuturisBlackC;
+	text-transform: uppercase;
+	font-size: rem(30);
+}

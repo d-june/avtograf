@@ -1,0 +1,182 @@
+.contacts {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    z-index: 5;
+    padding: rem(17) rem(17) 0 rem(17);
+    font-size: rem(16);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out 0s;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    
+    @media (min-width: $mobile) {
+        top: rem(-19);
+        left: rem(-1);
+        min-width: rem(518);
+        height: 100vh;
+    }
+    
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        
+        &__wrapper {
+            transform: translateX(0);
+        }
+    }
+
+    &.active > &__wrapper {        
+        transform: translateX(0);
+    }
+
+    &__wrapper {
+        transition: all 0.5s ease-in-out 0s;
+        transform: translateX(-100%);
+        height: 100%;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $mainColor;
+        padding: rem(0) rem(0) rem(22) rem(54);
+        cursor: pointer;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+        font-family: FuturaFuturisBlackC;
+        font-size: rem(20);
+
+        &::before {
+            font-size: rem(25);
+        }
+    }
+
+    &__hide {
+        font-size: rem(16);
+        padding: rem(10) rem(0) rem(10) rem(10);
+        transition: color 0.3s ease-in-out 0s;
+
+        @media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+    }
+
+    &__content {
+        padding: rem(54);
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - rem(72));
+    }
+
+    &__subway {
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+        margin-bottom: rem(16);
+    }
+
+    &__subway-station {
+        display: flex;
+        align-items: center;
+        gap: rem(8);
+    }
+
+    &__metro-icon{
+        display: flex;
+        padding: rem(5);
+        justify-content: center;
+        align-items: center;
+        border-radius: rem(12);
+        font-size: rem(16);
+        color: $lightColor;
+        &_purple {
+            background: $purpleColor;
+        }
+        &_blue {
+            background: $blueColor;
+        }
+    }
+
+    &__address {
+        font-family: FuturaFuturisLightC;
+        font-size: rem(15);
+        margin-bottom: rem(16);
+        max-width: rem(185);
+    }
+
+    &__working-hours {
+        margin-bottom: rem(16);
+    }
+
+    &__phone {
+        transition: color 0.3s ease-in-out 0s;
+        @media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+    }
+
+    &__mail {
+        color: $accentColor;
+        margin-bottom: rem(32);
+        transition: color 0.3s ease-in-out 0s;
+        @media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+			}
+		}
+    }
+
+    &__social {
+        display: flex;
+        gap: rem(23.5)
+    }
+
+    &__social-item {
+        color: $accentColor;
+        font-size: rem(20);
+        margin-bottom: rem(32);
+        transition: color 0.3s ease-in-out 0s;
+        @media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+			}
+		}
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: rem(22);
+        margin-top: rem(174);
+        &::before {
+            font-size: rem(20);
+        }
+    }
+}
+
+.requisites-contacts {
+    flex: 1;
+    
+    &__title {
+        margin-bottom: rem(4);
+    }
+
+    &__text {
+        font-family: FuturaFuturisLightC;
+        font-size: rem(14);
+    }
+}
+ 

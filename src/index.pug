@@ -1,0 +1,145 @@
+
+
+html 
+    title="Главная"
+    include html/head
+
+    body 
+        .wrapper
+            include html/header
+            main.main
+                .main__container
+                    section.main__hero.hero-main
+                        .hero-main__left
+                            .hero-main__image
+                                img(src="@img/hero/polyamide-disc.png" alt="Полиамидные зачистные диски")
+                            h2.hero-main__title Полиамидные зачистные диски
+                            p.hero-main__text Для очистки металлических поверхностей без съема материала
+                        .hero-main__slider.swiper
+                            .swiper-slide__navigation
+                                .swiper-slide__prev._icon-arrow-right
+                                .swiper-slide__next._icon-arrow-right
+                            .swiper-slide__controll
+                                .swiper-slide__pagination
+                            .hero-main__wrapper.swiper-wrapper
+                                .hero-main__slide.swiper-slide
+                                    .swiper-slide__column
+                                        .swiper-slide__image
+                                            img(src="@img/hero/banner-1.jpg" alt="баннер").swiper-slide__picture
+                                .hero-main__slide.swiper-slide
+                                    .swiper-slide__column
+                                        .swiper-slide__image
+                                            img(src="@img/hero/banner-2.jpg" alt="баннер").swiper-slide__picture
+                    section.main__new-products.new-products
+                        .new-products__top
+                            h2.new-products__title.title Новинки магазина
+                            .new-products__icon._icon-wave
+                            a(href="404.html").new-products__more Смотреть все
+                        .new-products__slider.swiper
+                            .swiper-slide__navigation
+                                .swiper-slide__prev._icon-arrow-right
+                                .swiper-slide__next._icon-arrow-right
+                            .new-products__wrapper.swiper-wrapper
+                    section.main__categories.categories-main
+                        .categories-main__top
+                            h2.categories-main__title.title Товарные категории
+                        ul.categories-main__list.categories
+                            li.categories-main__item
+                                a(href="404.html").categories-main__link
+                                    .categories-main__icon._icon-cutting 
+                                    p Резка
+                            li.categories-main__item
+                                a(href="404.html").categories-main__link
+                                    .categories-main__icon._icon-stripping 
+                                    p Зачистка
+                            li.categories-main__item
+                                a(href="404.html").categories-main__link
+                                    .categories-main__icon._icon-grinding
+                                    p Шлифование
+                            li.categories-main__item
+                                a(href="404.html").categories-main__link
+                                    .categories-main__icon._icon-quartzing
+                                    p Кварцевание
+                            li.categories-main__item
+                                a(href="404.html").categories-main__link
+                                    .categories-main__icon._icon-filing
+                                    p Опиливание
+                            li.categories-main__item
+                                a(href="404.html").categories-main__link
+                                    .categories-main__icon._icon-drilling
+                                    p Сверление
+                            li.categories-main__item
+                                a(href="404.html").categories-main__link
+                                    .categories-main__icon._icon-polishing
+                                    p Полировка
+                            li.categories-main__item
+                                a(href="404.html").categories-main__link
+                                    .categories-main__icon._icon-tool
+                                    p Инструмент
+                            li.categories-main__item
+                                a(href="404.html").categories-main__link
+                                    .categories-main__icon._icon-materials
+                                    p Материалы
+                    section.main-brands.brands-main
+                        .brands-main__top
+                            h2.brands-main__title.title Бренды
+                            .brands-main__icon._icon-wave
+                            a(href="404.html").brands-main__more Смотреть все
+                        .brands-main__photos
+                            .brands-main__picture-ibg
+                                img(src="@img/brands//photos/sander-1.jpg" alt="sander").brands-main__image
+                                .brands-main__hover
+                                    .brands-main__picture-brand
+                                        img(src="@img/brands/hanko.svg" alt="hanko").brands-main__brand
+                                    img(src="@img/wave.svg" alt="волна иконка").brands-main__wave
+                            .brands-main__picture-ibg
+                                img(src="@img/brands//photos/sander-1.jpg" alt="sander").brands-main__image
+                                .brands-main__hover
+                                    .brands-main__picture-brand
+                                        img(src="@img/brands/hanko.svg" alt="hanko").brands-main__brand
+                                    img(src="@img/wave.svg" alt="волна иконка").brands-main__wave
+                            .brands-main__picture-ibg
+                                img(src="@img/brands//photos/sander-1.jpg" alt="sander").brands-main__image
+                                .brands-main__hover
+                                    .brands-main__picture-brand
+                                        img(src="@img/brands/hanko.svg" alt="hanko").brands-main__brand
+                                    img(src="@img/wave.svg" alt="волна иконка").brands-main__wave
+                        .brands-main__slider.swiper
+                            .swiper-slide__navigation
+                                .swiper-slide__prev._icon-arrow-right
+                                .swiper-slide__next._icon-arrow-right
+                            .brands-main__wrapper.swiper-wrapper
+                                .brands-main__slide.swiper-slide
+                                    .swiper-slide__column
+                                        .brands-main__item
+                                            img(src="@img/brands/flexifoam.svg" alt="flexifoam").brands-main__image
+                                .brands-main__slide.swiper-slide
+                                    .swiper-slide__column
+                                        .brands-main__item
+                                            img(src="@img/brands/mirka.svg" alt="mirka").brands-main__image
+                                .brands-main__slide.swiper-slide
+                                    .swiper-slide__column
+                                        .brands-main__item
+                                            img(src="@img/brands/norton.svg" alt="norton").brands-main__image
+                                .brands-main__slide.swiper-slide
+                                    .swiper-slide__column
+                                        .brands-main__item
+                                            img(src="@img/brands/debever.svg" alt="debever").brands-main__image
+                                .brands-main__slide.swiper-slide
+                                    .swiper-slide__column
+                                        .brands-main__item
+                                            img(src="@img/brands/pferd.svg" alt="pferd").brands-main__image
+                                .brands-main__slide.swiper-slide
+                                    .swiper-slide__column
+                                        .brands-main__item
+                                            img(src="@img/brands/abra-force.svg" alt="abra-force").brands-main__image
+                                .brands-main__slide.swiper-slide
+                                    .swiper-slide__column
+                                        .brands-main__item
+                                            img(src="@img/brands/hanko.svg" alt="hanko").brands-main__image
+                    .main__preloader.preloader 
+                        include html/preloader
+            include html/footer
+        include html/popup
+    
+

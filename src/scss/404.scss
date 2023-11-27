@@ -1,0 +1,25 @@
+.not-found {
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        font-family: FuturaFuturisBlackC;
+        font-size: rem(40);
+        margin-bottom: rem(20);
+    }
+    
+    &__descriprion {
+        font-size: rem(30);
+    }
+}
+

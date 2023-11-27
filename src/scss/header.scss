@@ -1,0 +1,787 @@
+//====================================================================================================
+.header {
+	position: relative;
+	z-index: 10;
+
+	&__container {
+		font-size: rem(15);	
+	}
+
+	&__burger-icon {
+		font-size: rem(21);
+		@media(min-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__top {
+		border-bottom: 1px solid $lightColor;
+	}
+
+	&__top-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: rem(19) 0 rem(19) 0;
+		@media(min-width: $mobile) {
+			padding: rem(33) 0 rem(19) 0;
+		}	
+	}
+
+	&__contacts-block {
+		@media(min-width: $mobile) {
+			position: relative;
+		}
+	}
+
+	&__contacts-block-title {
+		display: flex;
+		align-items: center;
+		gap: rem(9.34);
+		font-family: FuturaFuturisLightC;
+		font-size: rem(15);
+		cursor: pointer;
+		transition: color 0.3s ease-in-out 0s;
+		
+		&::before {
+			font-size: rem(22);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+	}
+
+	&__contacts-call {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(16);
+
+		@media(min-width: $mobile) {
+			align-items: flex-end;
+			gap: rem(19);
+		}
+	}
+
+	&__phones {
+		display: flex;
+		gap: rem(16);
+	}
+
+	&__phone-link {
+		font-size: rem(15);
+		transition: color 0.3s ease-in-out 0s;
+
+		&_bold {
+			font-family: FuturaFuturisBlackC;
+			transition: color 0.3s ease-in-out 0s;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: $accentColor;
+				}
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+	}
+
+	&__call {
+		display: flex;
+		gap: rem(17);
+	}
+
+	&__back-call {
+		position: relative;
+		transition: color 0.3s ease-in-out 0s;
+		font-family: FuturaFuturisLightC;
+		color: $accentColor;
+		cursor: pointer;
+
+		@media(min-width: $mobile) {
+			color: $mainColor
+		}
+
+		.header__back-call-icon {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(20px);
+			transition: all 0.3s ease-in-out 0s;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+				.header__back-call-icon {
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(0);
+				}
+			}
+		}
+		
+	}
+	&__back-call-icon {
+		position: absolute;
+		top: rem(25);
+		left: 0;
+		
+	}
+	&__icon-wave {
+		color: $accentColor;
+	}
+	&__whatsapp {
+		color: $accentColor;
+		font-family: FuturaFuturisLightC;
+		transition: color 0.3s ease-in-out 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+			}
+		}
+	}
+	&__bottom {
+		border-bottom: 1px solid $mainColor;
+		
+	}
+	&__bottom-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		gap: rem(64);
+		width: 100%;
+		height: calc(100vh - rem(74));
+		background-color: #fff;
+		z-index: 5;
+		padding: rem(0) rem(22) rem(36) rem(22);
+		opacity: 0;
+		visibility: hidden;
+		transform: translateX(-100%);
+		transition: all 0.5s ease-in-out 0s;
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(0);
+			touch-action: none;
+		}
+		
+		@media(min-width: $mobile) {
+			flex-direction: row;
+			justify-content: space-between;
+			padding: rem(20) 0;
+			gap: rem(20);
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(0);
+			height: auto;
+		}
+
+		@media (max-width: $mobile) {
+			position: absolute;
+			top: rem(74);
+			left: 0;
+		}
+	}
+
+	&__catalog-body {
+		position: relative;
+		align-self: flex-start;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: rem(19) 0 rem(19) 0;
+		border-bottom: 1px solid $mainColor;
+		width: 100%;
+
+		@media(min-width: $mobile) {
+			padding: 0;
+			border: none;
+			width: auto;
+		}
+	}
+
+	&__catalog-title {
+		width: 100%;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		align-items: center;
+		font-family: FuturaFuturisBlackC;
+		font-size: rem(20);
+		cursor: pointer;
+		transition: color 0.3s ease-in-out 0s;
+		
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+		
+		&::before {
+			font-size: rem(16);
+			transform: rotate(180deg);
+			@media(min-width: $mobile) {
+				display: none;
+			}
+		}
+
+		@media(min-width: $mobile) {
+			width: auto;
+		}
+	}
+
+	&__icons {
+		display: flex;
+		gap: rem(32);
+		font-size: rem(20);
+		cursor: pointer;
+	}
+
+	&__search {
+		transition: color 0.3s ease-in-out 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+	}
+
+	&__status {
+		@media(min-width: $mobile) {
+			position: relative;
+		}
+	}
+
+	&__cart {
+			@media(min-width: $mobile) {
+				position: relative;
+			}
+	}
+
+	&__connect-with-us {
+		justify-self: end;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(35);
+
+		@media(min-width: $mobile) {
+			display: none;
+		}
+	}
+}
+
+.cart-header {
+	&__icon {
+		display: flex;
+		align-items: center;
+		gap: rem(6);
+		font-size: rem(21);
+		transition: color 0.3s ease-in-out 0s;
+
+		span {
+			font-family: FuturaFuturisBlackC;
+			font-size: rem(12);
+		}
+		
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+	}
+
+	&__wrapper {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 100;
+		opacity: 0;
+    	visibility: hidden;
+    	transition: all 0.5s ease-in-out 0s;
+		min-width: 100vw;
+
+		@media(min-width: $mobile) {
+			min-width: rem(375);
+			top: rem(-24);
+		}
+	}
+
+	._active-cart > &__wrapper {
+		opacity: 1;
+        visibility: visible;
+	}
+
+	._active-cart > &__wrapper > &__body {      
+		opacity: 1;
+        visibility: visible;  
+        transform: translateY(0);
+    }
+
+	&__body {
+		padding: rem(19) rem(0) rem(39) rem(0);
+		background: #ffffff;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.5s ease 0s;
+		transform: translateY(-50%);
+		z-index: 100;
+
+		@media(min-width: $mobile) {
+			height: calc(100vh - rem(100));
+		}
+
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: rem(21);
+		margin: rem(0) rem(15) rem(0) rem(15);;
+		border-bottom: 1px solid $mainColor;
+		position: relative;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: rem(35);
+		padding-left: rem(21);
+		&::before {
+			font-size: rem(25);
+		}
+	}
+
+	&__close {
+		cursor: pointer; 
+
+		&::before, &::after {
+			content: ""; 
+			position: absolute; 
+			right: rem(0);
+			width: 18px; 
+			height: 3px; 
+			background: $mainColor;
+		}
+		&::before {transform: rotate(45deg);}
+		&::after {transform: rotate(-45deg);}
+	}
+
+	&__bottom {
+		border-top: 1px solid $mainColor;
+		padding-top: rem(21);
+		margin: 0 rem(15) 0 rem(15);
+	}
+
+	&__quantity {
+		font-family: FuturaFuturisBlackC;
+		font-size: rem(12);
+		color: $accentColor;
+	}
+
+	&__payment {
+		display: flex;
+		justify-content: space-between;
+		font-family: FuturaFuturisLightC;
+		font-size: rem(15);
+		color: $accentColor;
+		padding-bottom: rem(21);
+	}
+
+	&__total-price {
+		font-family: FuturaFuturisBlackC;
+		font-size: rem(20);
+		color: $mainColor;
+	}
+
+	&__button {
+		width: 100%;
+	}
+}
+
+.cart-list {
+	flex: 1;
+
+	&__image-ibg {
+		flex: 0 0 rem(65);
+		height: rem(65);
+	}
+
+	&__body {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__title {
+		font-family: FuturaFuturisLightC;
+		line-height: 1.5em;
+		font-size: rem(12);
+		color: $greyColor;
+	}
+
+	&__about {
+		display: flex;
+		align-items: center;
+		gap: rem(22);
+		font-family: FuturaFuturisBlackC;
+		font-size: rem(12);
+	}
+
+	&__quantity {
+		display: flex;
+		align-items: center;
+	}
+
+	&__delete {
+		cursor: pointer; 
+
+		&::before, &::after {
+			content: ""; 
+			position: absolute; 
+			right: rem(15);
+			width: 15px; 
+			height: 3px; 
+			background: $mainColor;
+		}
+		&::before {transform: rotate(45deg);}
+		&::after {transform: rotate(-45deg);}
+	}
+
+	&__item-wrapper {
+		min-height: rem(112);
+		position: relative;
+	}
+
+	&__item {
+		height: 100%;
+		display: flex;
+		align-items: flex-start;
+		gap: rem(13);
+		padding: rem(16) rem(25) rem(16) rem(15);
+		border-bottom: 1px solid #F4F4F4;
+		background-color: #fff;
+		min-height: rem(112);
+		transition: all 0.5s ease-in-out 0s ;
+		width: 100%;
+		position: absolute;
+		right: 0;
+		transition: all 0.5s ease-in-out 0s ;
+
+		&_minus, &_plus {
+			background-color: $accentColor;
+			border-radius: rem(4);
+			color: $lightColor;
+			font-size: rem(20);
+			line-height: 5em;
+			width: rem(19);
+			height: rem(19);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			@media (min-width: $tablet) {
+				display: none;
+			}
+		}
+
+		&_minus {
+			margin-right: rem(10);
+		}
+
+		&_plus {
+			margin-left: rem(10);
+		}
+
+		@media (min-width: $tablet) {
+			@media (any-hover: hover) {
+				&:hover {
+					position: absolute;
+					right: 0;
+					width: 120%;
+					  box-shadow: 0px 7px 80px 0px rgba(0, 0, 0, 0.10);
+					padding: rem(16) rem(25) rem(16) rem(15);
+				}
+			}
+			@media (any-hover: hover) and (pointer: fine) {
+				&:hover &_minus {
+					display: flex;
+				}
+			}
+
+			@media (any-hover: hover) {
+				&:hover &_plus {
+					display: flex;
+				
+				}
+			}
+		  }
+	}
+}
+
+
+.status-header {
+	&__icon {
+		display: flex;
+		align-items: center;
+		gap: rem(6);
+		font-size: rem(21);
+		transition: color 0.3s ease-in-out 0s;
+
+		span {
+			font-family: FuturaFuturisBlackC;
+			font-size: rem(12);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+	}
+
+	&__wrapper {
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		right: 0;
+		min-width: 100vw;
+		opacity: 0;
+    	visibility: hidden;
+    	transition: all 0.5s ease-in-out 0s;
+		z-index: 20;
+
+		@media (min-width: $mobile) {
+			top: rem(-21);
+			min-width: rem(375);
+		}
+	}
+
+	._active-status > &__wrapper {
+		opacity: 1;
+        visibility: visible;
+	}
+
+	._active-status > &__wrapper > &__body {      
+		opacity: 1;
+        visibility: visible;  
+        transform: translateY(0);
+    }
+
+	&__body {
+		width: 100%;
+		height: 100%;
+		padding: rem(0) rem(0) rem(39) rem(0);
+		background: #ffffff;
+		height: calc(100vh - rem(100));
+		display: flex;
+		flex-direction: column;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.5s ease 0s;
+		transform: translateY(-50%);
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: rem(19) 0 rem(20) 0;
+		margin: rem(0) rem(15) rem(0) rem(15);;
+		border-bottom: 1px solid $mainColor;
+		position: relative;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: rem(35);
+		padding-left: rem(21);
+		&::before {
+			font-size: rem(25);
+		}
+	}
+
+	&__close {
+		cursor: pointer; 
+
+		&::before, &::after {
+			content: ""; 
+			position: absolute; 
+			right: rem(0);
+			width: 18px; 
+			height: 3px; 
+			background: $mainColor;
+		}
+		&::before {transform: rotate(45deg);}
+		&::after {transform: rotate(-45deg);}
+	}
+
+	&__bottom {
+		padding-top: rem(21);
+		margin: 0 rem(15) 0 rem(15);
+	}
+
+	&__button {
+		width: 100%;
+	}
+}
+
+.status-list {
+	overflow: auto;
+	flex: 1;
+
+	&__image-ibg {
+		flex: 0 0 rem(65);
+		height: rem(65);
+	}
+
+	&__body {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: rem(25);
+	}
+
+	&__title {
+		font-family: FuturaFuturisLightC;
+		line-height: 1.5em;
+		font-size: rem(12);
+		color: $greyColor;
+	}
+
+	&__about {
+		display: flex;
+		align-items: center;
+		gap: rem(22);
+		font-family: FuturaFuturisBlackC;
+		font-size: rem(12);
+	}
+	
+	&__price {
+		font-family: FuturaFuturisBlackC;
+		font-size: rem(12);
+	}
+
+	&__delete {
+		cursor: pointer; 
+		color: $accentColor;
+		transition: text-shadow 0.3s ease-in-out 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				text-shadow: 0 0 10px $accentColor;
+			}
+			
+		}
+	}
+
+	&__item-wrapper {
+		min-height: rem(112);
+		position: relative;
+	}
+
+	&__item {
+		height: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: rem(13);
+		padding: rem(16) rem(25) rem(16) rem(15);
+		border-bottom: 1px solid #F4F4F4;
+		background-color: #fff;
+		min-height: rem(112);
+		transition: all 0.5s ease-in-out 0s ;
+		width: 100%;
+		transition: all 0.3s ease-in-out 0s ;
+
+		@media (any-hover: hover) {
+			&:hover {
+				  box-shadow: 0px 7px 80px 0px rgba(0, 0, 0, 0.10);
+			}
+		}
+	}
+}
+
+
+.menu-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex: 1;
+
+	@media(min-width: $mobile) {
+		align-items: center;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+	
+		@media(min-width: $mobile) {
+			flex-direction: row;
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		
+		padding: rem(16);
+		@media(min-width: $mobile) {
+			padding: rem(0);
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		padding: rem(16);
+		transition: color 0.3s ease-in-out 0s;
+
+		@media(min-width: $mobile) {
+			padding: rem(0) rem(10);
+		}
+		@media(min-width: $tablet) {
+			padding: rem(0) rem(30);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+		
+		span {
+			font-family: FuturaFuturisBlackC;
+			margin-right: rem(5);
+		}
+	}
+
+}
+
+//====================================================================================================
+
+

@@ -1,0 +1,63 @@
+header.header
+    .header__top
+        .header__container
+            .header__top-content
+                .header__burger-icon._icon-burger
+                div(data-da=".header__connect-with-us, 767.98, last").header__contacts-block
+                    h2.header__contacts-block-title._icon-location Контакты
+                    include contacts
+                a(href="/").header__logo.logo Лого
+                div(data-da=".header__connect-with-us, 767.98, first").header__contacts-call
+                    .header__phones
+                        a(href="tel:+78002228781").header__phone-link_bold 8 (800) 222-87-81
+                        a(href="tel:+78123258780").header__phone-link 8 (812) 325-87-80
+                    .header__call
+                        button(data-popup="#back-call").header__back-call
+                            p Заказать звонок
+                            img(src="@img/wave-call.svg" alt="иконка волна").header__back-call-icon
+                        .header__icon-wave._icon-wave
+                        a(href="404.html").header__whatsapp WhatsApp
+    .header__bottom
+        .header__container
+            .header__bottom-content
+                div(data-da=".header__bottom-content, 767.98, 1").header__catalog-body
+                    .header__catalog-title._icon-arrow-left Каталог
+                    include menu-catalog
+                div(data-da=".header__bottom-content, 767.98, 3").header__menu.menu-header
+                    button(type="button").menu-header__icon.icon-menu
+                        span
+                    nav.menu-header__body
+                        ul.menu-header__list
+                            li.menu-header__item
+                                a(href="404.html").menu-header__link
+                                    span %
+                                    p Акции и новости
+                            li.menu-header__item
+                                a(href="404.html").menu-header__link О магазине
+                            li.menu-header__item
+                                a(href="404.html").menu-header__link Оплата и доставка
+                div(data-da=".header__bottom-content, 767.98, 2").header__icons
+                    div(data-popup="#search").header__search._icon-search
+                    .header__status.status-header
+                        .status-header__icon._icon-heart
+                        .status-header__wrapper
+                            .status-header__body
+                                .status-header__top
+                                    .status-header__title.title._icon-heart Избранное
+                                    .status-header__close
+                                ul.status-header__list.status-list
+                                .status-header__bottom
+                                    button.status-header__button.btn._icon-heart-broken Очистить список
+                    div(data-da=".header__top-content, 767.98").header__cart.cart-header
+                         .cart-header__icon._icon-cart
+                         .cart-header__wrapper
+                            .cart-header__body
+                                .cart-header__top
+                                    .cart-header__title.title._icon-cart Корзина
+                                    .cart-header__close
+                                ul.cart-header__list.cart-list
+                                .cart-header__bottom
+                                    .cart-header__order
+                                    button.cart-header__button.btn._icon-package оформить заказ
+                .header__connect-with-us
+            

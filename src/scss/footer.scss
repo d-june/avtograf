@@ -1,0 +1,199 @@
+//====================================================================================================
+.footer {
+    background: #222222 url('../img/wave-footer.svg') top 400px left 0 / cover repeat-x;
+    color: #fff;
+
+    @media (min-width: $tablet) {
+        background: #222222 url('../img/wave-footer.svg') top 110px left 0 / auto repeat-x;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: space-between;
+        padding: rem(57.5) rem(52) rem(69) rem(52);
+        font-family: FuturaFuturisLightC;
+        color: $lightColor;
+        gap: rem(55);
+
+        @media (min-width: $tablet) {
+            grid-template-columns: 22% auto 23%;
+            padding: rem(60) 0 rem(109) 0;
+            gap: rem(78);
+        };
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        &:last-child {
+            align-items: end;
+        }
+    }
+
+    &__logo {
+        margin-bottom: rem(32);
+        color: #fff;
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    &__mail {
+        display: grid;
+        grid-template-columns: rem(20) auto;
+        column-gap: rem(15);
+        margin-bottom: rem(29);
+        font-size: rem(15);
+    }
+
+    &__icon {
+        grid-row: span 2;
+        font-size: rem(20);
+        color: $accentColor;
+
+        &_light {
+            font-size: rem(20);
+            color: #fff;
+        }
+    }
+    &__link {
+        color: $accentColor;
+        transition: color 0.3s ease-in-out 0s;
+        @media (any-hover: hover) {
+			&:hover {
+                color: #fff;
+			}
+		}
+    }
+
+    &__address {
+        display: flex;
+        gap: rem(15);
+        margin-bottom: rem(29);
+        font-size: rem(15);
+    }
+
+    &__button {
+        align-self: center;
+        gap: rem(22);
+        padding: rem(13) rem(20) rem(11) rem(18);
+
+        @media(min-width: $mobile) {
+            align-self: flex-start;
+        }
+    }
+
+    &__text {
+        color: #595959;
+        margin-bottom: rem(16);
+    }
+
+    &__copy {
+        color: $lightColor;
+        width: 100%;
+        text-align: left;
+        @media(min-width: $tablet) {
+            text-align: right;
+        }
+    }
+
+    &__phone {
+        color: $lightColor;
+        font-family: FuturaFuturisBlackC;
+        font-size: rem(20);
+        margin-bottom: rem(6);
+        transition: color 0.3s ease-in-out 0s;
+        align-self: center;
+
+        @media (any-hover: hover) {
+			&:hover {
+                color: $accentColor;
+			}
+		}
+
+        @media (min-width: $mobile) {
+            align-self: flex-start;
+        }
+
+        @media(min-width: $tablet) {
+            align-self: flex-end;
+        }
+    }
+
+    &__working-hours-block {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: rem(16);
+        margin-bottom: rem(32);
+
+        @media (min-width: $mobile) {
+            align-self: flex-start;
+        }
+
+        @media(min-width: $tablet) {
+            flex-direction: row;
+            align-self: flex-end;
+        }
+    }
+
+    &__working-hours {
+        @media(min-width: $tablet) {
+            text-align: right;
+        }
+    }
+
+    &__back-call {
+        align-self: center;
+        cursor: pointer;
+        color: $accentColor;
+        transition: color 0.3s ease-in-out 0s;
+
+        @media (any-hover: hover) {
+			&:hover {
+                color: #fff;
+			}
+		}
+
+        @media (min-width: $mobile) {
+            align-self: flex-start;
+        }
+
+        @media(min-width: $tablet) {
+            align-self: flex-end;
+        }
+    }
+    &__social {
+        align-self: center;
+        display: flex;
+        gap: rem(23);
+        margin-top: rem(20);
+
+        @media (min-width: $mobile) {
+            align-self: flex-start;
+        }
+        
+        @media(min-width: $tablet) {
+            align-self: flex-end;
+        }
+    }
+    &__socilal-item {
+        a {
+            transition: color 0.3s ease-in-out 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+	

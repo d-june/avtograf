@@ -1,0 +1,49 @@
+div(id="feedback" aria-hidden="true").popup
+    .popup__wrapper
+        .popup__content
+            button(data-close type="button").popup__close
+            .popup__form.form-popup
+                form(action="#").form-popup__body
+                    h2.form-popup__title.title Обратная связь
+                    label.form-popup__label
+                        input(type="text" placeholder="Имя").form-popup__input
+                    label.form-popup__label
+                        input(type="tel" placeholder="Телефон").form-popup__input
+                    label.form-popup__label
+                        input(type="email" placeholder="Email").form-popup__input
+                    label.form-popup__label
+                        textarea(cols="30" rows="10" placeholder="Сообщение").form-popup__textarea
+                    input(type="checkbox" id="checkbox" name="checkbox" checked="true").form-popup__checkbox
+                    label(for="checkbox").form-popup__label_checkbox Даю согласие на обработку персональных данных
+                    .form-popup__bottom
+                        button(type="submit").form-popup__submit.btn
+                            ._icon-send 
+                            p Отправить
+                        label.form-popup__label
+                            input(type="file").form-popup__file-input
+                            .form-popup__file-icon._icon-file
+
+div(id="back-call" aria-hidden="true").popup
+    .popup__wrapper
+        .popup__content
+            button(data-close type="button").popup__close
+            .popup__form.form-popup
+                form(action="#").form-popup__body
+                    h2.form-popup__title.title Заказать звонок
+                    label.form-popup__label
+                        input(type="text" placeholder="Имя").form-popup__input
+                    label.form-popup__label
+                        input(type="tel" placeholder="Телефон").form-popup__input
+                    label.form-popup__label
+                        button(type="submit").form-popup__submit.btn
+                            ._icon-phone 
+                            p Отправить
+
+div(id="search" aria-hidden="true").popup
+    .popup__wrapper
+        .popup__content.search-popup
+            .popup__form.search-popup__form
+                form(action="#").search-popup__body
+                    label(for="search").search-popup__label._icon-search
+                    input(type="text" placeholder="Что ищем?" autocomplete="off" id="search" name="search").search-popup__input
+                button(data-close type="button").popup__close.search-popup__close

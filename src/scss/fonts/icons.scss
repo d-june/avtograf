@@ -1,0 +1,127 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+
+
+._icon-heart-broken:before {
+  content: "\e922";
+}
+._icon-heart-broken-fill:before {
+  content: "\e920";
+}
+._icon-heart-fill:before {
+  content: "\e921";
+}
+._icon-burger:before {
+  content: "\e91f";
+}
+._icon-check-mark:before {
+  content: "\e91e";
+}
+._icon-wave:before {
+  content: "\e91d";
+}
+._icon-arrow-left:before {
+  content: "\e900";
+}
+._icon-cart:before {
+  content: "\e901";
+}
+._icon-cutting:before {
+  content: "\e902";
+}
+._icon-delivery:before {
+  content: "\e903";
+}
+._icon-drilling:before {
+  content: "\e904";
+}
+._icon-feedback:before {
+  content: "\e905";
+}
+._icon-file:before {
+  content: "\e906";
+}
+._icon-filing:before {
+  content: "\e907";
+}
+._icon-grinding:before {
+  content: "\e908";
+}
+._icon-insta:before {
+  content: "\e909";
+}
+._icon-location:before {
+  content: "\e90a";
+}
+._icon-location-cursor:before {
+  content: "\e90b";
+}
+._icon-mailru:before {
+  content: "\e90c";
+}
+._icon-map:before {
+  content: "\e90d";
+}
+._icon-materials:before {
+  content: "\e90e";
+}
+._icon-package:before {
+  content: "\e90f";
+}
+._icon-quartzing:before {
+  content: "\e910";
+}
+._icon-phone:before {
+  content: "\e911";
+}
+._icon-polishing:before {
+  content: "\e912";
+}
+._icon-search:before {
+  content: "\e913";
+}
+._icon-send:before {
+  content: "\e914";
+}
+._icon-stripping:before {
+  content: "\e915";
+}
+._icon-telegram:before {
+  content: "\e916";
+}
+._icon-time:before {
+  content: "\e917";
+}
+._icon-tool:before {
+  content: "\e918";
+}
+._icon-vk:before {
+  content: "\e919";
+}
+._icon-whatsapp:before {
+  content: "\e91a";
+}
+._icon-youtube:before {
+  content: "\e91b";
+}
+._icon-heart:before {
+  content: "\e91c";
+}
+._icon-arrow-right:before {
+  content: "\ea3c";
+}
